@@ -152,17 +152,28 @@ bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
 # Workspace names
+
+set $monitor_right DP-0
+set $monitor_left DP-2
+
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1:main
-set $ws2 2:notifs
+set $ws1 "1:1 main"
+set $ws2 "2:2 notifs"
 set $ws3 3
-set $ws4 4:steam
-set $ws5 5
+set $ws4 "4:4 steam"
+set $ws5 "5:5 fullscreen"
 set $ws6 6
 set $ws7 7
-set $ws8 8:jack
+set $ws8 "8:8 jack"
+
+# bind to workspaces
+workspace $ws1 output $monitor_left
+workspace $ws2 output $monitor_right
+workspace $ws4 output $monitor_left
+workspace $ws5 output $monitor_left
+workspace $ws8 output $monitor_right
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -203,8 +214,18 @@ assign [class="Discord"] $ws2
 assign [class="Slack"] $ws2
 assign [class="Steam"] $ws4
 assign [class="Telegram"] $ws2
+assign [class="Microsoft Teams - Preview"] $ws2
+assign [class="Chromium"] $ws2
 assign [class="Cadence"] $ws8
 assign [class="Carla"] $ws8
+# assign games
+assign [class="csgo_linux64"] $ws5
+assign [class="Age of Empires II: Definitive Edition"] $ws5
+assign [class="DOS II : DE (1259x1390) - (DX11) - (x64) - (7 WT)"] $ws5
+assign [class="DOS II : DE"] $ws5
+assign [class="Paradox Launcher"] $ws4
+assign [class="Europa Universalis IV"] $ws5
+assign [class="Mini Metro"] $ws5
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
