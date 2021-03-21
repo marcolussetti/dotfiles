@@ -155,14 +155,14 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1
-set $ws2 2
+set $ws1 1:main
+set $ws2 2:notifs
 set $ws3 3
-set $ws4 4
+set $ws4 4:steam
 set $ws5 5
 set $ws6 6
 set $ws7 7
-set $ws8 8
+set $ws8 8:jack
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -199,6 +199,12 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
+assign [class="Discord"] $ws2
+assign [class="Slack"] $ws2
+assign [class="Steam"] $ws4
+assign [class="Telegram"] $ws2
+assign [class="Cadence"] $ws8
+assign [class="Carla"] $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
