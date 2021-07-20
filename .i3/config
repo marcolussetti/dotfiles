@@ -330,7 +330,7 @@ exec --no-startup-id xautolock -time 60 -locker blurlock
 exec --no-startup-id firefox
 exec --no-startup-id slack
 exec --no-startup-id discord
-exec --no-startup-id sh ~/.screenlayout/screens_newer.sh
+exec --no-startup-id sh ~/.screenlayout/screens_triple.sh
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id blueman-applet
