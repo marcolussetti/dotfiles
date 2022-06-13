@@ -7,7 +7,7 @@ set nocompatible
 call plug#begin()
 
 Plug 'sheerun/vim-polyglot'  " Syntax highlight support for all languages
-Plug 'dense-analysis/ale'  " Linting
+" Plug 'dense-analysis/ale'  " Linting
 
 " fzf - fuzzy file searching support
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
