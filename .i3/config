@@ -469,5 +469,6 @@ mode "$mode_gaps_outer" {
 
 # Wine exceptions
 for_window [class="Wine"] floating enable, border none  # League of Legends, https://www.reddit.com/r/leagueoflinux/comments/e6yjxk/im_a_noob_in_i3_and_i_need_help_showing_lol/
-for_window [instance="^origin.exe$" class="Wine"] floating enable, fullscreen disable  # Origin, https://www.reddit.com/r/wine_gaming/comments/an9w74/origin_freezes_at_launch_on_arch_linux/
+#for_window [instance="^origin.exe$" class="Wine"] floating enable, fullscreen disable  # Origin, https://www.reddit.com/r/wine_gaming/comments/an9w74/origin_freezes_at_launch_on_arch_linux/
+for_window [instance="origin.exe"] floating enable
 
