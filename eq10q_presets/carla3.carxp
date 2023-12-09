@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE CARLA-PROJECT>
-<CARLA-PROJECT VERSION='2.2'>
+<CARLA-PROJECT VERSION='2.5'>
  <EngineSettings>
   <ForceStereo>false</ForceStereo>
   <PreferPluginBridges>false</PreferPluginBridges>
@@ -574,104 +574,146 @@
 
    <Parameter>
     <Index>20</Index>
+    <Name>Mid/Side switch for channel pair 0</Name>
+    <Symbol>ms_0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Mid/Side switch for channel pair 1</Name>
+    <Symbol>ms_1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
     <Name>Enabled</Name>
     <Symbol>enabled</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>21</Index>
+    <Index>23</Index>
     <Name>Analyzer mode</Name>
     <Symbol>mode</Symbol>
     <Value>3</Value>
    </Parameter>
 
    <Parameter>
-    <Index>22</Index>
+    <Index>24</Index>
+    <Name>Mesh thickness</Name>
+    <Symbol>lthick</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
     <Name>Spectralizer mode</Name>
     <Symbol>spm</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>23</Index>
+    <Index>26</Index>
     <Name>Spectralizer logarithmic scale</Name>
     <Symbol>splog</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>24</Index>
+    <Index>27</Index>
     <Name>Analyzer freeze</Name>
     <Symbol>freeze</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>25</Index>
+    <Index>28</Index>
+    <Name>Horizontal measuring line</Name>
+    <Symbol>mline</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
     <Name>FFT Tolerance</Name>
     <Symbol>tol</Symbol>
     <Value>2</Value>
    </Parameter>
 
    <Parameter>
-    <Index>26</Index>
+    <Index>30</Index>
     <Name>FFT Window</Name>
     <Symbol>wnd</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>27</Index>
+    <Index>31</Index>
     <Name>FFT Envelope</Name>
     <Symbol>env</Symbol>
     <Value>4</Value>
    </Parameter>
 
    <Parameter>
-    <Index>28</Index>
+    <Index>32</Index>
     <Name>Preamp gain</Name>
     <Symbol>pamp</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>29</Index>
+    <Index>33</Index>
     <Name>Graph zoom</Name>
     <Symbol>zoom</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>30</Index>
+    <Index>34</Index>
     <Name>Reactivity</Name>
     <Symbol>react</Symbol>
     <Value>0.200000002980232</Value>
    </Parameter>
 
    <Parameter>
-    <Index>31</Index>
+    <Index>35</Index>
     <Name>Channel</Name>
     <Symbol>chn</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>32</Index>
+    <Index>36</Index>
     <Name>Selector</Name>
     <Symbol>sel</Symbol>
-    <Value>0.00999999977648258</Value>
+    <Value>10</Value>
    </Parameter>
 
    <Parameter>
-    <Index>35</Index>
+    <Index>37</Index>
+    <Name>Horizontal measuring line level value</Name>
+    <Symbol>mlval</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>Stereo analysis Mid/Side mode</Name>
+    <Symbol>ms</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
     <Name>Spectralizer channel 0</Name>
     <Symbol>spc0</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>36</Index>
+    <Index>42</Index>
     <Name>Spectralizer channel 1</Name>
     <Symbol>spc1</Symbol>
     <Value>1</Value>
@@ -782,97 +824,132 @@
 
    <Parameter>
     <Index>10</Index>
+    <Name>Mid/Side switch for channel pair 0</Name>
+    <Symbol>ms_0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
     <Name>Enabled</Name>
     <Symbol>enabled</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>11</Index>
+    <Index>12</Index>
     <Name>Analyzer mode</Name>
     <Symbol>mode</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>12</Index>
+    <Index>13</Index>
+    <Name>Mesh thickness</Name>
+    <Symbol>lthick</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
     <Name>Spectralizer mode</Name>
     <Symbol>spm</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>13</Index>
+    <Index>15</Index>
     <Name>Spectralizer logarithmic scale</Name>
     <Symbol>splog</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>14</Index>
+    <Index>16</Index>
     <Name>Analyzer freeze</Name>
     <Symbol>freeze</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>15</Index>
+    <Index>17</Index>
+    <Name>Horizontal measuring line</Name>
+    <Symbol>mline</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
     <Name>FFT Tolerance</Name>
     <Symbol>tol</Symbol>
     <Value>2</Value>
    </Parameter>
 
    <Parameter>
-    <Index>16</Index>
+    <Index>19</Index>
     <Name>FFT Window</Name>
     <Symbol>wnd</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>17</Index>
+    <Index>20</Index>
     <Name>FFT Envelope</Name>
     <Symbol>env</Symbol>
     <Value>4</Value>
    </Parameter>
 
    <Parameter>
-    <Index>18</Index>
+    <Index>21</Index>
     <Name>Preamp gain</Name>
     <Symbol>pamp</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>19</Index>
+    <Index>22</Index>
     <Name>Graph zoom</Name>
     <Symbol>zoom</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>20</Index>
+    <Index>23</Index>
     <Name>Reactivity</Name>
     <Symbol>react</Symbol>
     <Value>0.200000002980232</Value>
    </Parameter>
 
    <Parameter>
-    <Index>21</Index>
+    <Index>24</Index>
     <Name>Channel</Name>
     <Symbol>chn</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>22</Index>
+    <Index>25</Index>
     <Name>Selector</Name>
     <Symbol>sel</Symbol>
-    <Value>0.00999999977648258</Value>
+    <Value>10</Value>
    </Parameter>
 
    <Parameter>
-    <Index>25</Index>
+    <Index>26</Index>
+    <Name>Horizontal measuring line level value</Name>
+    <Symbol>mlval</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>Stereo analysis Mid/Side mode</Name>
+    <Symbol>ms</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
     <Name>Spectralizer channel</Name>
     <Symbol>spc</Symbol>
     <Value>0</Value>
@@ -950,12 +1027,28 @@
    <Target>PulseAudio JACK Source:front-right</Target>
   </Connection>
   <Connection>
+   <Source>system:capture_2</Source>
+   <Target>PulseAudio JACK Source:front-right</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_2</Source>
+   <Target>PulseAudio JACK Source:front-left</Target>
+  </Connection>
+  <Connection>
+   <Source>PulseAudio JACK Sink:front-left</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
    <Source>PulseAudio JACK Sink:front-left</Source>
    <Target>Output - LSP Spectrum Analyzer x4:Input 0</Target>
   </Connection>
   <Connection>
    <Source>PulseAudio JACK Sink:front-left</Source>
    <Target>Output - EQ10Q Stereo:Input1</Target>
+  </Connection>
+  <Connection>
+   <Source>PulseAudio JACK Sink:front-right</Source>
+   <Target>system:playback_2</Target>
   </Connection>
   <Connection>
    <Source>PulseAudio JACK Sink:front-right</Source>
@@ -988,7 +1081,7 @@
    <Position x1="1089" y1="854">
     <Name>PulseAudio JACK Sink</Name>
    </Position>
-   <Position x1="2533" y1="1531">
+   <Position x1="2554" y1="1570">
     <Name>PulseAudio JACK Source</Name>
    </Position>
    <Position x1="1914" y1="1030" pluginId="0">
