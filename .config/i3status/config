@@ -16,6 +16,7 @@ general {
 
 order += "ipv4"
 order += "cpu_usage"
+order += "cpu_temperature 0"
 order += "disk /"
 # order += "disk /home"
 order += "wireless _first_"
@@ -27,6 +28,14 @@ order += "tztime local"
 
 cpu_usage {
         format = " cpu  %usage "
+}
+
+cpu_temperature 0 {
+        # The problem is this changes every time the computer is rebooted
+        # and you get a random temperature
+        path = "/sys/class/hwmon/hwmon3/temp1_input"
+        format = "%degrees°C"
+        max_threshold = 80
 }
 
 load {
