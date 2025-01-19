@@ -1,0 +1,93 @@
+# ------------------------------------------------------------------------------
+# Global settings
+# ------------------------------------------------------------------------------
+separator=false
+interval=5
+
+color_good="#2AA198"
+color_degraded="#DC322F"
+color_bad="#586E75"
+
+
+
+[cpu_usage]
+command=/usr/lib/i3blocks/cpu_usage/cpu_usage
+interval=5
+# You can set a label or let the script handle it. Example:
+#label=CPU 
+label= 
+
+[load]
+command=/usr/lib/i3blocks/load_average/load_average
+interval=5
+# label=LOAD
+
+[cpu_temperature]
+command=/usr/lib/i3blocks/temperature/temperature
+interval=5
+
+[gpu_usage]
+command=/home/marco/.config/i3blocks/gpu-load/gpu-load2
+interval=5
+# You can set a label or let the script handle it. Example:
+#label=GPU 
+# min_width=⚫  100% 100% 100% 100%
+label=  
+
+[gpu_temperature]
+command=/home/marco/.config/i3blocks/gpu-temperature/gpu-temperature
+interval=5
+label=
+
+[memory]
+command=/usr/lib/i3blocks/memory/memory
+interval=5
+label= 󰍛 
+
+# [wifi]
+# command=/usr/lib/i3blocks/wifi/wifi
+# interval=5
+# # For many i3blocks-contrib wifi scripts, you can specify:
+# INTERFACE=wlp10s0
+# label=  
+
+[bandwidth]
+command=/usr/lib/i3blocks/bandwidth3/bandwidth3
+interval=persist
+markup=pango
+label=
+INTERFACE=wlp10s0
+#USE_BITS=0
+#USE_BYTES=1
+#WARN_RX=0
+#WARN_TX=0
+#CRIT_RX=0
+#CRIT_TX=0
+#USE_SI=0
+
+[wifi_speed]
+command=~/.config/i3blocks/wifi-link-speed/wifi-link-speed
+interval=5
+# label=  
+interface=wlp10s0
+
+[diskroot]
+command=/usr/lib/i3blocks/disk/disk
+interval=30
+# The disk script typically looks at environment variables like:
+path=/
+label= ⛁ 
+
+[rofi-wttr]
+command=/home/marco/.config/i3blocks/rofi-wttr/rofi-wttr
+interval=3600
+LOCATION=Kamloops_CA
+LABEL= 🌡️ 
+
+[clock]
+# The i3blocks-contrib "clock" script might be more advanced, but you can also do:
+# command=/usr/share/i3blocks/clock
+# Or simply:
+command=date +"%Y-%m-%d %a ⚫ %H%M:%S"
+interval=1
+label=  

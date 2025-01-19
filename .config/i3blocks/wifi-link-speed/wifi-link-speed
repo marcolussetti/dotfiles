@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+#
+# Display Wi-Fi SSID, nominal link speed, and IP address.
+# If Wi-Fi is down, print "down" message.
+# Requires: iw, ip
+
+# Default interface if not set in i3blocks environment
+IFACE="${interface:-wlan0}"
+
+env | grep -E '^interface=' >/tmp/i3blocks_wifi_debug.txt
+
+# Check if interface is up
+if ! ip link show "$IFACE" | grep -q "state UP"; then
+    echo "down"
+    exit 0
+fi
+
+# Grab SSID from `iw dev <IFACE> link`
+ESSID=$(iw dev "$IFACE" link | grep 'SSID:' | awk '{ $1=""; print substr($0,2) }')
+
+# Grab nominal speed (bitrate), e.g. "300.0 MBit/s"
+SPEED=$(iw dev "$IFACE" link | grep 'tx bitrate:' | awk '{print $3 " " $4}')
+
+# Grab IP address
+IP=$(ip -4 addr show dev "$IFACE" | awk '/inet / {print $2}')
+
+# If no SSID, assume "down"
+if [ -z "$ESSID" ]; then
+    echo "WIFI: down"
+    exit 0
+fi
+
+# Print formatted output
+# Adjust to your liking. For example:
+#   "SSID: MyNetwork | 300.0 MBit/s | 192.168.0.10/24"
+# echo "$ESSID @ $SPEED ($IP)"
+echo "$ESSID @ $SPEED"

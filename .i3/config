@@ -335,7 +335,13 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id blueman-applet
 exec --no-startup-id aw-qt
-exec --no-startu-id quasselclient
+exec --no-startup-id quasselclient
+
+exec_always --no-startup-id clipcatd
+set $launcher-clipboard-insert clipcat-menu insert
+set $launcher-clipboard-remove clipcat-menu remove
+bindsym $mod+p exec $launcher-clipboard-insert
+bindsym $mod+o exec $launcher-clipboard-remove
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -371,7 +377,8 @@ set_from_resource $term_color15    color15
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	i3bar_command i3bar
-	status_command i3status
+	# status_command i3status
+        status_command i3blocks -c ~/.config/i3blocks/config
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'

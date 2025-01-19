@@ -1,0 +1,22 @@
+#!/bin/bash
+
+RAW_OUTPUT=$(
+  /home/marco/.config/i3blocks/gpu-load/gpu-load 2>/dev/null \
+  | awk 'NF == 4 { line = $0 } END { print line }'
+)
+TOTAL_VRAM_GB=8.0
+
+GPU=$(echo "$RAW_OUTPUT" | awk '{print $1}')         # e.g. "20%"
+VRAM_PERCENT=$(echo "$RAW_OUTPUT" | awk '{print $2}') # e.g. "3%"
+VIDEO=$(echo "$RAW_OUTPUT" | awk '{print $3}')
+PCIE=$(echo "$RAW_OUTPUT" | awk '{print $4}')
+
+# Strip the '%' sign from VRAM_PERCENT:
+VRAM_NUM="${VRAM_PERCENT%\%}"  # If VRAM_PERCENT="3%", VRAM_NUM="3"
+
+# Now calculate used GB
+VRAM_USED_GB=$(awk -v used="$VRAM_NUM" -v total="$TOTAL_VRAM_GB" \
+    'BEGIN { printf "%.1f", (used/100)*total }')
+
+echo "$GPU ${VRAM_USED_GB}/${TOTAL_VRAM_GB}GB"
+# echo "" 
