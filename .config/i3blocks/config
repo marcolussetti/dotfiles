@@ -82,6 +82,7 @@ label= ⛁
 command=/home/marco/.config/i3blocks/rofi-wttr/rofi-wttr
 interval=3600
 LOCATION=Kamloops_CA
+UNIT_SYSTEM=m
 LABEL= 🌡️ 
 
 [clock]
