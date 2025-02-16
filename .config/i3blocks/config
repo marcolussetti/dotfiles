@@ -69,7 +69,7 @@ INTERFACE=wlp10s0
 command=~/.config/i3blocks/wifi-link-speed/wifi-link-speed
 interval=5
 # label=  
-interface=wlp10s0
+interface=wlp13s0
 
 [diskroot]
 command=/usr/lib/i3blocks/disk/disk
@@ -81,8 +81,9 @@ label= ⛁
 [rofi-wttr]
 command=/home/marco/.config/i3blocks/rofi-wttr/rofi-wttr
 interval=3600
-LOCATION=Kamloops_CA
+LOCATION=Kamloops_BC
 UNIT_SYSTEM=m
+ANCHOR=southeast
 LABEL= 🌡️ 
 
 [clock]

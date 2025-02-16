@@ -27,7 +27,8 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+#bindsym $mod+Return exec terminal
+bindsym $mod+Return exec terminology
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -43,7 +44,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ################################################################################################
 
 exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+bindsym $mod+Ctrl+m exec terminology -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
@@ -55,12 +56,12 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+bindsym $mod+Ctrl+b exec terminology -e 'bmenu'
 bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
+bindsym $mod+F5 exec terminology -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -153,8 +154,8 @@ bindsym $mod+Ctrl+Left workspace prev
 
 # Workspace names
 
-set $monitor_right DP-0
-set $monitor_left DP-2
+set $monitor_right HDMI-0
+set $monitor_left DP-0
 
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
@@ -330,7 +331,8 @@ exec --no-startup-id xautolock -time 60 -locker blurlock
 #exec --no-startup-id firefox
 exec --no-startup-id slack
 exec --no-startup-id discord
-exec --no-startup-id sh ~/.screenlayout/screens_triple.sh
+#exec --no-startup-id sh ~/.screenlayout/screens_triple.sh
+exec --no-startup-id sh ~/.screenlayout/screens2025.sh
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id blueman-applet
